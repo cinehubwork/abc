@@ -19,7 +19,7 @@
     "isPermitFullscreen": "api.phimtor.com,",
     "idPlayerToGetLink": "watch-iframe,",
     "urlPrivacy": "",
-    "showUpgradeMethod": false,
+    "showUpgradeMethod": true,
     "defaultContentPopUpAds": "<font color=#FF1D1D>Phim sẽ được phát sau khi bạn xem hết quảng cáo.</font><br><br>Do thiếu hụt kinh phí duy trì máy chủ nên vài quảng cáo sẽ xuất hiện có thể gây khó chịu, mong các bạn thông cảm đợi xem hết quảng cáo, 3s sau sẽ có nút X để tắt quảng cáo<br>",
     "__v": 0
 }

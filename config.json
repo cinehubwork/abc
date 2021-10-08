@@ -2,7 +2,7 @@
     "approvedApp": true,
     "value": "phimhd",
     "key": "startApp",
-    "version": 6,
+    "version": 8,
     "config": "_ga=GA1.2.1977961335.1608446401; fbm_259774944661214=base_domain=; user_id=18485; user_pw_hash=498f93f3bd71a7f5344b72891e4de52c; login=true; __cfduid=dd3b5184652eaec6b32df079dd04a2ec01617642913; myModalFacebook=1; TOKEN=r7imvuge0jhfbf7geprshek6v4; _gid=GA1.2.1514703881.1619865776; _pop=1; _gat_gtag_UA_111308051_1=1",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,

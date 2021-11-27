@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 67,
-    "config": "*Khi xem phim bị lỗi. Hay tua nhanh 10s để xem tiếp nhé!*",
+    "config": "*Khi xem phim bị lỗi. Hãy tua nhanh 10s để xem tiếp nhé!*",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",

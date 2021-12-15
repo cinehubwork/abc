@@ -8,7 +8,8 @@
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",
     "unlimited" : "10,/Unlimited",
-    "listServers": [
+    "listServers" : "",
+    "listApis": [
         {
             "mainUrl" :"https://phimchill.tv",
             "name" : "Phimmoi",

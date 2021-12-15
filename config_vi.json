@@ -8,7 +8,8 @@
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",
     "unlimited" : "100.000,/vĩnh viễn",
-    "listServers": [
+    "listServers" : "",
+    "listApis": [
         {
             "mainUrl" :"https://phimchill.tv",
             "name" : "Phimmoi",

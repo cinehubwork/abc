@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 67,
-    "config": "*When player error, just seek forward 10s to continue watching!*",
+    "config": "*New update version 5.6.72 found. Would you please download new apk from http://phimhd.xyz and install the update!*",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",

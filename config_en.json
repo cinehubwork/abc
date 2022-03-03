@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 76,
-    "config": "",
+    "config": null,
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",

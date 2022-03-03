@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 76,
-    "config": null,
+    "config": "Chúng tôi biết bạn có nhiều sự lựa chọn.\n Cảm ơn bạn đã chọn BongNgoTV hôm nay!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",

@@ -10,7 +10,7 @@
     "unlimited" : "10,/Unlimited",
     "listServers" : "",
     "movieOnlyForPremium": true,
-    "watchAdsToAccessPremiumMovie": true,
+    "watchAdsToAccessPremiumMovie": false,
     "urlImagePoster": "",
     "urlRedirectPoster": "",
     "isRequired": false,
@@ -23,6 +23,6 @@
     "phone": "0962672240",
     "urlPaymentPaypal": "https://paypal.me/duongnv1996",
     "urlPaymentMomo": "https://nhantien.momo.vn/0962672240",
-    "defaultContentPopUpAds": "<font color=#FF1D1D>Phim sẽ được phát sau khi bạn xem hết quảng cáo.</font><br><br>Do thiếu hụt kinh phí duy trì máy chủ nên vài quảng cáo sẽ xuất hiện có thể gây khó chịu, mong các bạn thông cảm đợi xem hết quảng cáo, 3s sau sẽ có nút X để tắt quảng cáo<br>",
+    "defaultContentPopUpAds": "<font color=#FF1D1D>Nội dung Premium</font><br><br>Vui lòng nâng cấp gói <font color=#FF1D1D>Premium/Unlimited</font> để mở khóa kho phim VIP với chất lượng cao nhất!<br>",
     "__v": 0
 }

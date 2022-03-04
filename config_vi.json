@@ -9,7 +9,7 @@
     "premium" : "40.000,/3 tháng",
     "unlimited" : "100.000,/vĩnh viễn",
     "listServers" : "",
-    "movieOnlyForPremium": true,
+    "movieOnlyForPremium": false,
     "watchAdsToAccessPremiumMovie": false,
     "urlImagePoster": "",
     "urlRedirectPoster": "",

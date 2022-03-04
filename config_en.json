@@ -9,7 +9,7 @@
     "premium" : "3,/3 months",
     "unlimited" : "10,/Unlimited",
     "listServers" : "",
-    "movieOnlyForPremium": true,
+    "movieOnlyForPremium": false,
     "watchAdsToAccessPremiumMovie": false,
     "urlImagePoster": "",
     "urlRedirectPoster": "",
@@ -23,6 +23,6 @@
     "phone": "0962672240",
     "urlPaymentPaypal": "https://paypal.me/duongnv1996",
     "urlPaymentMomo": "https://nhantien.momo.vn/0962672240",
-    "defaultContentPopUpAds": "<font color=#FF1D1D>Nội dung Premium</font><br><br>Vui lòng nâng cấp gói <font color=#FF1D1D>Premium/Unlimited</font> để mở khóa kho phim VIP với chất lượng cao nhất!<br>",
+    "defaultContentPopUpAds": "<font color=#FFFFFF><b>Nội dung Premium</b></font><br><br><font color=#FFFFFF>Vui lòng nâng cấp gói</font> <font color=#FF1D1D>Premium/Unlimited</font> <font color=#FFFFFF>để mở khóa kho phim VIP với chất lượng cao nhất!</font><br>",
     "__v": 0
 }

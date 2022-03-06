@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 76,
-    "config": "We know you have many choices.\nThank you for choosing BongNgoTV today!",
+    "config": "Nếu bạn đang sử dụng phiên bản không chính thức của BongNgoTV. Điện thoại của bạn có nguy cơ dính mã độc và bị HACK. Vui lòng chỉ sử dụng phiên bản BongNgoTV trên CH Play!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",

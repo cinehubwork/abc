@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "version": 79,
-    "config": "Đã có phiên bản BongNgoTV mới trên CH Play, Mời bạn tải xuống và tiếp tục trải nghiệm!",
+    "config": "Nguồn PhimHD đã bị lỗi link. Mời bạn đổi sang nguồn khác để tiếp tục xem phim!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",

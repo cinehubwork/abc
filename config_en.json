@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnb29nbGVJZCI6IjEwNzY4NTQ0ODc2ODgwMTUxOTYxOCIsIm5pY2tOYW1lIjoiVGl0dGlrOTg3MjM3OTIiLCJjdXJyZW50VGltZU1pbGxpcyI6MTY0ODUzODU4MzY1NiwiZXhwIjoxNjUxMTMwNTgzLCJ1c2VySWQiOjI3MjIyNH0.lgbhBtHBI7RlWL6DAOAr79DmSbH1aCkUvikLx3NZ3DY",
-    "version": 79,
+    "version": 80,
     "config": "Nguồn PhimHD đã bị lỗi link. Mời bạn đổi sang nguồn khác để tiếp tục xem phim!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,

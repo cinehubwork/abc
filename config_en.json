@@ -25,5 +25,22 @@
     "urlPaymentPaypal": "https://paypal.me/duongnv1996",
     "urlPaymentMomo": "https://nhantien.momo.vn/0962672240",
     "defaultContentPopUpAds": "<font color=#FFFFFF><b>Nội dung Premium</b></font><br><br><font color=#FFFFFF>Vui lòng nâng cấp gói</font> <font color=#FF1D1D>Premium/Unlimited</font> <font color=#FFFFFF>để mở khóa kho phim VIP với chất lượng cao nhất!</font><br>",
-    "__v": 0
+    "__v": 0,
+    "listBanners":[
+        {
+          "_id": "603a01c8aeafd82893d7715e",
+          "urlStream": "https://cdn81.turkturk.net/content/stream/indfilms/Fast.and.Furious.F9.The.Fast.Saga.2021.720p.WEBRip.THAI.DUB.PariMatch.mp4",
+          "urlPhoto": "https://www.themoviedb.org/t/p/original/qIicLxr7B7gIt5hxZxo423BJLlK.jpg",
+          "title": "F9 - Thai Lan",
+          "logo": "http://phimhd.xyz/dist/images/poster/f9.png",
+          "isSponsor": true
+        },
+        {
+          "_id": "603a0cc3aeafd82893d77162",
+          "urlDetail": "https://phimchill.tv/info/godzilla-dai-chien-kong-pm8757",
+          "urlPhoto": "https://www.themoviedb.org/t/p/original/pX0xvPSj6GUBRpf0thzZSZsekQK.jpg",
+          "title": "Godzilla vs. Kong (2021)",
+          "logo": "http://phimhd.xyz/dist/images/poster/godzilla.png"
+        }
+      ]
 }

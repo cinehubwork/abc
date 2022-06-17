@@ -26,25 +26,18 @@
     "urlPaymentMomo": "https://nhantien.momo.vn/0962672240",
     "defaultContentPopUpAds": "<font color=#FFFFFF><b>Nội dung Premium</b></font><br><br><font color=#FFFFFF>Vui lòng nâng cấp gói</font> <font color=#FF1D1D>Premium/Unlimited</font> <font color=#FFFFFF>để mở khóa kho phim VIP với chất lượng cao nhất!</font><br>",
     "__v": 0,
-    "listBanners2":[
-        {
-          "_id": "603a01c8aeafd82893d7715e",
-          "urlStream": "https://cdn81.turkturk.net/content/stream/indfilms/Fast.and.Furious.F9.The.Fast.Saga.2021.720p.WEBRip.THAI.DUB.PariMatch.mp4",
-          "urlPhoto": "https://www.themoviedb.org/t/p/original/qIicLxr7B7gIt5hxZxo423BJLlK.jpg",
-          "title": "Phiêu lưu  •  Hành động  •  Viễn tưởng  • Hồi hộp",
-          "logo": "http://phimhd.xyz/dist/images/poster/f9.png",
-          "isSponsor": true
-        },
+    "listBanners":[
+       
         {
           "_id": "603a0cc3aeafd82893d77162",
-          "urlDetail": "https://phimchill.tv/info/godzilla-dai-chien-kong-pm8757",
+          "urlDetail": "https://phimmoichill.net/info/godzilla-dai-chien-kong-pm8757",
           "urlPhoto": "https://www.themoviedb.org/t/p/original/pX0xvPSj6GUBRpf0thzZSZsekQK.jpg",
           "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
           "logo": "http://phimhd.xyz/dist/images/poster/godzilla.png"
         },
         {
           "_id": "603a0cc3aeafd82893d77163",
-          "urlDetail": "https://247phim.com/xemphim/cau-be-mat-tich-mua-4-phan-1-24165",
+          "urlDetail": "https://phimmoichill.net/info/cau-be-mat-tich-mua-4-phan-1-pm9882",
           "urlPhoto": "https://www.themoviedb.org/t/p/original/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
           "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
           "logo": "https://logos-world.net/wp-content/uploads/2020/05/Stranger-Things-Logo.png"

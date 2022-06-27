@@ -367,8 +367,8 @@
         },
         {
             "link": [
-                "http://htv-drm-live-cdn.fptplay.net/CDN-FPT02/CARTOON-SD-720p/playlist.m3u8",
-                "https://livecdn.fptplay.net/hda3/cartoonnetworkhd_vhls.smil/chunklist_b5000000.m3u8"
+                "https://livecdn.fptplay.net/hda3/cartoonnetworkhd_hls.smil/chunklist.m3u8                ",
+               
             ],
             "name": " Cartoon Network HD",
             "photo": "https://i.ibb.co/THhk8Wf/Cartoon-Network-BEARTV.png",

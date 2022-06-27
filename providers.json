@@ -303,5 +303,10 @@
         "name": "247Phim",
         "url": "https://247phim.com",
         "status": 1
+    },
+    "ApiMDB": {
+        "name": "ApiMDB",
+        "url": "https://v2.apimdb.net",
+        "status": 0
     }
 }

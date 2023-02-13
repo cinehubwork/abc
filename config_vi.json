@@ -4,7 +4,7 @@
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaWNrTmFtZSI6IlRpdHRpazQ4ODA5NTk4IiwiY291bnRyeUNvZGUiOiI4NCIsImN1cnJlbnRUaW1lTWlsbGlzIjoxNjU2Mjk1NTU2MDY2LCJtb2JpbGUiOiI5NjI2NzIyNDAiLCJleHAiOjE2NTg4ODc1NTYsInVzZXJJZCI6NTY3ODg5NX0.d1VWiNU9Yg67JlNesbHIwGQ39Me_V5Zp7g2kFuASqF0",
     "version": 80,
-    "config": "Đã có phiên bản BongNgoTV v5.6.87 khắc phục lỗi chỉ xem được 5phút. Mời bạn tải bản mới tại https://bongngotv.app",
+    "config": "Nguồn PhimHD đang bị lỗi. Mời bạn chuyển sang nguồn khác để xem nhé!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",

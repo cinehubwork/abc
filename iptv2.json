@@ -2986,7 +2986,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv1/playlist.m3u8",
+        "url": "https://vtsstr7.tv24.vn/live/SCTV_HD_Hai_new.smil/playlist.m3u8",
         "raw": "#EXTINF:-1 tvg-id=\"sctv1hd\" group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/63.png\", SCTV1 HD\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv1/playlist.m3u8",
         "line": 339,
         "catchup": {
@@ -3038,7 +3038,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv3/playlist.m3u8",
+        "url": "https://vtsstr4.tv24.vn/live/SCTVHDThieunhi_new.smil/playlist.m3u8",
         "raw": "#EXTINF:-1 tvg-id=\"sctv3hd\" group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/65.png\", SCTV3 HD\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv3/playlist.m3u8",
         "line": 343,
         "catchup": {
@@ -3064,7 +3064,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv4/playlist.m3u8",
+        "url": "https://vtsstr4.tv24.vn/live/SCTV_HD_GiaiTri_new.smil/playlist.m3u8",
         "raw": "#EXTINF:-1 tvg-id=\"sctv4hd\" group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/66.png\", SCTV4 HD\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv4/playlist.m3u8",
         "line": 345,
         "catchup": {
@@ -3090,7 +3090,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv5/playlist.m3u8",
+        "url": "https://code.vthanhtivi.pw/getlink/mytv/226/hd.m3u8",
         "raw": "#EXTINF:-1 group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/67.png\", SCTV5 HD - SCJ\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv5/playlist.m3u8",
         "line": 347,
         "catchup": {
@@ -3142,7 +3142,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv7/playlist.m3u8",
+        "url": "https://vtsstr4.tv24.vn/live/SCTV_HD_SanKhau_new.smil/playlist.m3u8",
         "raw": "#EXTINF:-1 tvg-id=\"sctv7hd\" group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/69.png\", SCTV7 HD\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv7/playlist.m3u8",
         "line": 352,
         "catchup": {
@@ -3194,7 +3194,7 @@
           "referrer": "",
           "user-agent": ""
         },
-        "url": "https://api.vthanhtivi.pw/v2/getlink/sctv/sctv9/playlist.m3u8",
+        "url": "https://vtsstr4.tv24.vn/live/SCTV_HD_PhimChauA_new.smil/playlist.m3u8",
         "raw": "#EXTINF:-1 tvg-id=\"sctv9hd\" group-title=\"💚| SCTV\" tvg-logo=\"https://cdn.hqth.me/logo/thumbs/71.png\", SCTV9 HD\r\nhttps://api.vthanhtivi.pw/v2/getlink/sctv/sctv9/playlist.m3u8",
         "line": 356,
         "catchup": {

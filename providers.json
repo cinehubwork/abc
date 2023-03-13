@@ -304,6 +304,16 @@
         "url": "https://247phim.net",
         "status": 1
     },
+    "TVHayProvider": {
+        "name": "Nguồn TVHay",
+        "url": "https://tvhay2.org",
+        "status": 1
+    },
+    "AnimeVietsubProvider": {
+        "name": "Nguồn AnimeVietsub",
+        "url": "http://animevietsub.in",
+        "status": 1
+    },
     "ApiMDB": {
         "name": "ApiMDB",
         "url": "https://v2.apimdb.net",

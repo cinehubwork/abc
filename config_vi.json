@@ -4,7 +4,7 @@
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaWNrTmFtZSI6IlRpdHRpazQ4ODA5NTk4IiwiY291bnRyeUNvZGUiOiI4NCIsImN1cnJlbnRUaW1lTWlsbGlzIjoxNjU2Mjk1NTU2MDY2LCJtb2JpbGUiOiI5NjI2NzIyNDAiLCJleHAiOjE2NTg4ODc1NTYsInVzZXJJZCI6NTY3ODg5NX0.d1VWiNU9Yg67JlNesbHIwGQ39Me_V5Zp7g2kFuASqF0",
     "version": 80,
-    "config": "Nguồn PhimHD lại lỗi nên tôi cập nhật bản vá trên v5.6.92 rồi nhé. Các ông update trên https://bongngotv.app rồi xem tiếp nhé!",
+    "config": "Đã có phiên bản 5.6.93 cập nhật thêm nguồn Tvhay và Animevietsub. Mời bạn cập nhật để tiếp tục xem phim!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",

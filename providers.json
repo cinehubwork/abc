@@ -306,7 +306,7 @@
     },
     "TVHayProvider": {
         "name": "Nguồn TVHay",
-        "url": "https://tvhay2.org",
+        "url": "https://haychill2.org",
         "status": 1
     },
     "AnimeVietsubProvider": {

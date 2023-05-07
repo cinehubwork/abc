@@ -49,5 +49,6 @@
           "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
           "logo": "https://static.wikia.nocookie.net/logopedia/images/0/0c/Marvel%27s_Doctor_Strange_in_the_Multiverse_of_Madness_Logo.png/revision/latest?cb=20190802015824"
         }
-      ]
+      ],
+      "listApiSupporedByPhimHD": [ "Phimmoi", "SoraStream"]
 }

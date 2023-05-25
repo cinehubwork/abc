@@ -50,5 +50,15 @@
           "logo": "https://static.wikia.nocookie.net/logopedia/images/0/0c/Marvel%27s_Doctor_Strange_in_the_Multiverse_of_Madness_Logo.png/revision/latest?cb=20190802015824"
         }
       ],
-      "listApiSupportedByPhimHD": [ ]
+      "listRenaming":[
+        {
+          "original":"SoraStream",
+          "newName":"PhimCLC"
+        },
+        {
+          "original":"SuperStream",
+          "newName":"Phim 4K"
+        }
+      ],
+      "listApiSupportedByPhimHD": ["PhimHD","HDToday","Subnhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix" ]
 }

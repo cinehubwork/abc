@@ -54,5 +54,5 @@
           "newName":"Phim 4K"
         }
       ],
-    "listApiSupportedByPhimHD": ["PhimHD","HDToday","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
+    "listApiSupportedByPhimHD": ["HDToday","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
 }

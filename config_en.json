@@ -4,7 +4,7 @@
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaWNrTmFtZSI6IlRpdHRpazQ4ODA5NTk4IiwiY291bnRyeUNvZGUiOiI4NCIsImN1cnJlbnRUaW1lTWlsbGlzIjoxNjU2Mjk1NTU2MDY2LCJtb2JpbGUiOiI5NjI2NzIyNDAiLCJleHAiOjE2NTg4ODc1NTYsInVzZXJJZCI6NTY3ODg5NX0.d1VWiNU9Yg67JlNesbHIwGQ39Me_V5Zp7g2kFuASqF0",
     "version": 80,
-    "config": "Hiện tại các nguồn phim đang bị lỗi, Ad đang tích cực fix bug. Mời ae đổi sang nguồn Phimmoi và TVHay xem cho ổn định nhé!",
+    "config": "BongNgoTV | BIG UPDATE! Cập nhật phiên bản 5.7.0 chính thức. Mời bạn tải app tại https://bongngotv.app hoặc bấm cập nhật trên app để tiếp tục trải nghiệm. Ngoài ra chúng tớ cũng có nhóm Telegram dành riêng cho hội viên để cập nhật thông tin mới nhất từ BongNgoTV. Link nhóm tele: https://t.me/bongngotv",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",

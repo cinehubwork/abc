@@ -4,7 +4,7 @@
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaWNrTmFtZSI6IlRpdHRpazQ4ODA5NTk4IiwiY291bnRyeUNvZGUiOiI4NCIsImN1cnJlbnRUaW1lTWlsbGlzIjoxNjU2Mjk1NTU2MDY2LCJtb2JpbGUiOiI5NjI2NzIyNDAiLCJleHAiOjE2NTg4ODc1NTYsInVzZXJJZCI6NTY3ODg5NX0.d1VWiNU9Yg67JlNesbHIwGQ39Me_V5Zp7g2kFuASqF0",
     "version": 80,
-    "config": "BongNgoTV | Cập nhật phiên bản 5.7.1 👑 Tất cả nguồn phim  đã được mã hóa nên bắt buộc phải cập nhật bản 5.7.1 trở lên mới xem được phim. Mời bạn tải app tại https://bongngotv.app/ hoặc bấm cập nhật để tiếp tục trải nghiệm. Ngoài ra chúng tớ cũng có nhóm Telegram dành riêng cho hội viên để cập nhật thông tin mới nhất từ BongNgoTV. Link nhóm tele: https://t.me/bongngotv",
+    "config": null,
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "40.000,/3 tháng",
@@ -46,5 +46,5 @@
           "newName":"Phim 4K"
         }
       ],
-    "listApiSupportedByPhimHD": ["HDToday","Phim1080","AnimeVietsub","Fshare","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
+    "listApiSupportedByPhimHD": ["VLXX","Sextop1","HDToday","Phim1080","AnimeVietsub","Fshare","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
 }

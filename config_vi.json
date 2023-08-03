@@ -34,6 +34,27 @@
         "urlPhoto": "https://www.themoviedb.org/t/p/original/yWvyAEcddlTSKmgIFGAAAndakKX.jpg",
         "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
         "logo": "https://www.themoviedb.org/t/p/original/cZFltogcaqcFlkmKTREFa7JL2Im.png"
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77163",
+        "urlDetail": "https://phimnhanh2.com/quy-quyet-cua-do-vo-dinh",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/faafq0NouR3wSemwc77slLEJHId.jpg",
+        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
+        "logo": null
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77161",
+        "urlDetail": "https://phimnhanh2.com/ve-binh-dai-ngan-ha-3",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/Ak5hAxorxMpxKoVw5e3kGfxs7sY.jpg",
+        "title": "Hành Động  •  Phiêu Lưu •  Viễn Tưởng  •  Khoa Học",
+        "logo": null
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77161",
+        "urlDetail": "https://phimnhanh2.com/robot-dai-chien-6-quai-thu-troi-day",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/gdl3A2WfHPYJ7Mam1AuZn4qJyYh.jpg",
+        "title": "Hành Động  •  Phiêu Lưu •  Viễn Tưởng  •  Khoa Học",
+        "logo": null
       }
       ],
       "listRenaming":[

@@ -28,6 +28,21 @@
     "defaultContentPopUpAds": "<font color=#FFFFFF><b>Nội dung Premium</b></font><br><br><font color=#FFFFFF>Vui lòng nâng cấp gói</font> <font color=#FF1D1D>Premium/Unlimited</font> <font color=#FFFFFF>để mở khóa kho phim VIP với chất lượng cao nhất!</font><br>",
     "__v": 0,
     "listBanners":[
+      
+      {
+        "_id": "603a0cc3aeafd82893d77163",
+        "urlDetail": "https://phimnhanh2.com/quy-quyet-cua-do-vo-dinh",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/faafq0NouR3wSemwc77slLEJHId.jpg",
+        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
+        "logo": "https://img.freepik.com/premium-vector/vector-transparent-checkerboard-transparent-pattern-background_546559-432.jpg?w=2000"
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77161",
+        "urlDetail": "https://phimnhanh2.com/ve-binh-dai-ngan-ha-3",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/Ak5hAxorxMpxKoVw5e3kGfxs7sY.jpg",
+        "title": "Hành Động  •  Phiêu Lưu •  Viễn Tưởng  •  Khoa Học",
+        "logo": "https://static.wikia.nocookie.net/logos/images/4/4c/Marvel%27s_Guardians_of_the_Galaxy_Vol._3.png/revision/latest?cb=20230509071009&path-prefix=vi"
+      },
       {
         "_id": "603a0cc3aeafd82893d77162",
         "urlDetail": "https://phimmoichilld.net/info/tyler-rake-nhiem-vu-giai-cuu-2-pm10476",
@@ -36,25 +51,11 @@
         "logo": "https://www.themoviedb.org/t/p/original/cZFltogcaqcFlkmKTREFa7JL2Im.png"
       },
       {
-        "_id": "603a0cc3aeafd82893d77163",
-        "urlDetail": "https://phimnhanh2.com/quy-quyet-cua-do-vo-dinh",
-        "urlPhoto": "https://www.themoviedb.org/t/p/original/faafq0NouR3wSemwc77slLEJHId.jpg",
-        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
-        "logo": ""
-      },
-      {
-        "_id": "603a0cc3aeafd82893d77161",
-        "urlDetail": "https://phimnhanh2.com/ve-binh-dai-ngan-ha-3",
-        "urlPhoto": "https://www.themoviedb.org/t/p/original/Ak5hAxorxMpxKoVw5e3kGfxs7sY.jpg",
-        "title": "Hành Động  •  Phiêu Lưu •  Viễn Tưởng  •  Khoa Học",
-        "logo": ""
-      },
-      {
         "_id": "603a0cc3aeafd82893d77161",
         "urlDetail": "https://phimnhanh2.com/robot-dai-chien-6-quai-thu-troi-day",
-        "urlPhoto": "https://www.themoviedb.org/t/p/original/gdl3A2WfHPYJ7Mam1AuZn4qJyYh.jpg",
+        "urlPhoto": "https://www.themoviedb.org/t/p/original/3EhiKCgQSjjX3nNyrSK4rokz9Ma.jpg",
         "title": "Hành Động  •  Phiêu Lưu •  Viễn Tưởng  •  Khoa Học",
-        "logo": ""
+        "logo": "https://www.themoviedb.org/t/p/original/k2WizmXPzNU9UR1t0epNIMGUcNM.png"
       }
       ],
       "listRenaming":[

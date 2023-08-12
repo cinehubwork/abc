@@ -15,7 +15,7 @@
     "urlImagePoster": "", 
     "urlRedirectPoster": "",
     "vast":null,
-    "isRequired": false,
+    "isRequired": true,
     "isBanned": "Bố Già (Bản Điện Ảnh)",
     "needToGetLink": "https://fmovies.app/,",
     "isPermitFullscreen": "api.phimtor.com,",

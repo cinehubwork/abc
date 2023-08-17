@@ -4,7 +4,7 @@
     "key": "startApp",
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaWNrTmFtZSI6IlRpdHRpazQ4ODA5NTk4IiwiY291bnRyeUNvZGUiOiI4NCIsImN1cnJlbnRUaW1lTWlsbGlzIjoxNjU2Mjk1NTU2MDY2LCJtb2JpbGUiOiI5NjI2NzIyNDAiLCJleHAiOjE2NTg4ODc1NTYsInVzZXJJZCI6NTY3ODg5NX0.d1VWiNU9Yg67JlNesbHIwGQ39Me_V5Zp7g2kFuASqF0",
     "version": 109,
-    "config": null,
+    "config": "BongNgoTV đã trở lại trên CH Play. Bản cập nhật 5.7.2 đã có trên CH Play với tên Bỏng Ngô Player. Mời các bạn tải phiên bản mới và trải nghiệm. Các bạn có thể dùng song song cả 2 phiên bản! Tải ngay tại đây...",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
     "premium" : "3,/3 months",
@@ -20,7 +20,7 @@
     "needToGetLink": "https://fmovies.app/,",
     "isPermitFullscreen": "api.phimtor.com,",
     "idPlaerToGetLink": "watch-iframe,",
-    "urlPrivacy": "https://t.me/bongngotv",
+    "urlPrivacy": "https://play.google.com/store/apps/details?id=com.javhd18",
     "showUpgradeMethod": true,
     "phone": "0962672240",
     "urlPaymentPaypal": "https://paypal.me/duongnv1996",
@@ -68,5 +68,5 @@
           "newName":"Phim 4K"
         }
       ],
-      "listApiSupportedByPhimHD": ["Bluphim","Motphim","VLXX","Sextop1","HDToday","Phim1080","AnimeVietsub","Fshare","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
+      "listApiSupportedByPhimHD": ["Bluphim","Motphim","VLXX","Sextop1","HDToday","Phim1080","Tocanime","Fshare","SubNhanh","Phimmoi","TVHay","Ổ Phim","SoraStream","SuperStream","Sflix.to","Bóng Đá & Tivi Online"]
 }

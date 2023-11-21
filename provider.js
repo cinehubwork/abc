@@ -22,7 +22,7 @@ const URL = {
 //     rejectUnauthorized: false
 // });
 
-export default class SubNhanh {
+module.exports = class SubNhanh {
     props = {}
     constructor(param) {
         this.props = param
@@ -570,43 +570,6 @@ export default class SubNhanh {
         let playlistHls = response.data
         //console.log('getQualityHls',playlistHls)
         return this.parseM3U8Playlist(domain, playlistHls)
-    }
-}
-
-
-/**
- * Parse HTML to get id token episode list from url stream page
- * @param {*} urlOther 
- * @returns 
- */
-export async function getLinkStreamFromEpisodeData2(epId) {
-    try {
-        const config = {
-            method: 'post',
-            url: 'https://subnhanh.im/frontend/default/ajax-player',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'Content-Type': 'multipart/form-data'
-            }
-        }
-        const form_data = new FormData()
-        form_data.append('epId', epId)
-        form_data.append('type', 'hls')
-        const headers = form_data.getHeaders()
-        headers['X-Requested-With'] = 'XMLHttpRequest'
-        let res = await axios.post('https://subnhanh.im/frontend/default/ajax-player', form_data,
-            { headers })
-
-        //console.log('---->', res.data);
-        return {
-            success: true,
-            message: res.data,
-        }
-    } catch (error) {
-        return {
-            success: false,
-            message: error.toString(),
-        }
     }
 }
 

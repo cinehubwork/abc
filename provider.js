@@ -1,6 +1,9 @@
-import axios from 'axios'
-import cheerio from 'cheerio'
-import url from 'url'
+// import axios from 'axios'
+const axios = require("axios")
+const cheerio = require("cheerio")
+const url = require("url")
+// import cheerio from 'cheerio'
+// import url from 'url'
 // import FormData from 'form-data';
 
 const URL = {

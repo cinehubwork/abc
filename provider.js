@@ -70,7 +70,20 @@ var Streamtape = function () {
                     return "ABC"
                 }, _callee2, this)
             }))
-
+             function getItemMove($, htmlMovie) {
+                let title = $(htmlMovie).find(".item-block-title").last().text()
+                //console.log("TITLE ->",title)
+                let status = $(htmlMovie).find(".badge").text()
+                let urlDetail = URL.DOMAIN + $(htmlMovie).find(".item-block-title").attr("href").substring(1)
+                const variable = $(htmlMovie).find(".item-image-block").first().attr("style")
+                var urlPhoto = variable.match(/url\(["']?([^"']*)["']?\)/)[1]
+                return {
+                    title,
+                    status,
+                    urlDetail,
+                    urlPhoto
+                }
+            }
             async function getHomeMovies(_x2) {
                 try {
 

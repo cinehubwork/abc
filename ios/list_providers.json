@@ -5,6 +5,7 @@
         "urlDefault": "https://subnhanh.im/the-loai/phim-bo",
         "urlSearch": "https://subnhanh.im/search?query=%s",
         "name": "Nguồn PhimHD",
+        "keyword": "subnhanh",
         "description": "Cập nhật phim nhanh, tốc độc load phim nhanh.",
         "isActive": true,
         "isVip": true,

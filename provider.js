@@ -102,7 +102,7 @@ var Streamtape = function () {
                         let listMovie = []
                         for (let index = 0; index < listMovieInCollection.length; index++) {
                             let movieInHtml = listMovieInCollection[index]
-                            let movie = this.getItemMove($, movieInHtml)
+                            let movie = getItemMove($, movieInHtml)
                             listMovie.push(movie)
                             allMovies.push(movie)
                         }

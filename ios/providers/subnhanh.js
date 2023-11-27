@@ -213,7 +213,7 @@ var Subnhanh = function () {
                         data: movie
                     }
                 } catch (error) {
-                    console.log("getDetailMovie ERROR", error)
+                    //console.log("getDetailMovie ERROR", error)
                     return {
                         success: false,
                         message: error.toString()
@@ -676,6 +676,6 @@ var Subnhanh = function () {
     return Subnhanh
 }()
 
-window.thisSource.function = function (libs, settings) {
+thisSource.function = function (libs, settings) {
     return new Subnhanh({ libs: libs, settings: settings })
 }

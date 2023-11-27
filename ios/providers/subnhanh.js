@@ -213,7 +213,7 @@ var Subnhanh = function () {
                         data: movie
                     }
                 } catch (error) {
-                    //console.log("getDetailMovie ERROR", error)
+                    console.log("getDetailMovie ERROR", error)
                     return {
                         success: false,
                         message: error.toString()

@@ -208,12 +208,13 @@ var Subnhanh = function () {
                         listRelateMovie.push(movie)
                     }
                     movie.listMovieRelate = JSON.stringify(listRelateMovie)
+                    console.log("movie get detail will response ", movie);
                     return {
                         success: true,
                         data: movie
                     }
                 } catch (error) {
-                    //console.log("getDetailMovie ERROR", error)
+                    console.log("getDetailMovie ERROR", error)
                     return {
                         success: false,
                         message: error.toString()

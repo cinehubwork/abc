@@ -13,5 +13,20 @@
         "version":1,
         "supportIOS": true,
         "raw": "https://raw.githubusercontent.com/cinehubwork/abc/master/ios/providers/subnhanh.js"
+    },
+    {
+        "_id": "6111efb5c04505ac8cc91071",
+        "url": "https://bluphim.com/",
+        "urlDefault": "https://subnhanh.im/the-loai/phim-bo",
+        "urlSearch": "https://subnhanh.im/search?query=%s",
+        "name": "Nguồn Bluphim",
+        "keyword": "bluphim",
+        "description": "Cập nhật phim nhanh, tốc độc load phim nhanh.",
+        "isActive": true,
+        "isVip": true,
+        "index": 1,
+        "version":1,
+        "supportIOS": true,
+        "raw": "https://raw.githubusercontent.com/cinehubwork/abc/master/ios/providers/subnhanh.js"
     }
 ]

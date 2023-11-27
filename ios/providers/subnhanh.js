@@ -676,6 +676,6 @@ var Subnhanh = function () {
     return Subnhanh
 }()
 
-window.thisSource.function = function (libs, settings) {
+exports.function = function (libs, settings) {
     return new Subnhanh({ libs: libs, settings: settings })
 }

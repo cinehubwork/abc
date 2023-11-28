@@ -198,8 +198,8 @@ var Subnhanh = function () {
                     let listRelateMovie = []
                     for (let index = 0; index < relateMovieHtml.length; index++) {
                         let movieInHtml = relateMovieHtml[index]
-                        let movie = getItemMove($, movieInHtml)
-                        listRelateMovie.push(movie)
+                        let movieRelate = getItemMove($, movieInHtml)
+                        listRelateMovie.push(movieRelate)
                     }
                     movie.listMovieRelate = JSON.stringify(listRelateMovie)
                     console.log("movie get detail will response ", movie);

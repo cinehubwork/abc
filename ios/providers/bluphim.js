@@ -62,7 +62,16 @@ var Bluphim = function () {
     {
         key: 'getHomeMovies',
         value: function () {
-         
+            var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url) {
+                var _libs, httpRequest, cheerio, html, n, reg, result
+                return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                    _libs = this.libs,
+                        httpRequest = _libs.httpRequest,
+                        cheerio = _libs.cheerio
+                    console.log("regeneratorRuntime  ====>")
+                    return "ABC"
+                }, _callee2, this)
+            }))
 
             async function getHomeMovies() {
                 try {

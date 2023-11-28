@@ -382,7 +382,7 @@ var Subnhanh = function () {
                                 let hostname = url_parts.hostname
                                 let urlPlaylist = `https://${hostname}/playlist/${id}/${new Date().getTime()}.m3u8`
                                 server.urlPlaylistHls = urlPlaylist
-                                let sourcePlaylist = await getQualityHls(urlPlaylist, hostname)
+                                let sourcePlaylist = await getQualityHls(this.libs,urlPlaylist, hostname)
                                 //console.log('sourcePlaylist', sourcePlaylist)
                                 listBackupServer.push({
                                     typeplay: server.typeplay,
@@ -409,12 +409,13 @@ var Subnhanh = function () {
                                 server.sourcePlaylist = sourcePlaylist
                             }
                         } catch (errorApi) {
-                            //console.log('ERROR API ',errorApi)
+                            console.error('ERROR API ===========>',errorApi)
                         }
 
                     }
-
                     listServer.push(...listBackupServer)
+                    console.log('RESPONSE API ===========>',listServer)
+
                     return {
                         success: true,
                         data: listServer,
@@ -662,8 +663,8 @@ var Subnhanh = function () {
         }
         return listQuality
     }
-    getQualityHls = async function (urlPlaylist, domain) {
-        let response = await this.libs.axios.get(urlPlaylist)
+    getQualityHls = async function (libs,urlPlaylist, domain) {
+        let response = await libs.axios.get(urlPlaylist)
         let playlistHls = response.data
         console.log('getQualityHls',playlistHls)
         return this.parseM3U8Playlist(domain, playlistHls)

@@ -665,7 +665,7 @@ var Subnhanh = function () {
     getQualityHls = async function (urlPlaylist, domain) {
         let response = await this.libs.axios.get(urlPlaylist)
         let playlistHls = response.data
-        //console.log('getQualityHls',playlistHls)
+        console.log('getQualityHls',playlistHls)
         return this.parseM3U8Playlist(domain, playlistHls)
     }
     return Subnhanh

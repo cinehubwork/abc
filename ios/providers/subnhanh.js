@@ -440,6 +440,8 @@ var Subnhanh = function () {
                     return await parseHtmlSearchPage(this.libs, urlSearch)
 
                 } catch (error) {
+                    console.log("Error searchMovie",error)
+
                     return {
                         success: false,
                         message: error.toString()
@@ -457,6 +459,8 @@ var Subnhanh = function () {
                     return await parseHtmlSearchPage(this.libs, urlSearch)
 
                 } catch (error) {
+                    console.log("Error searchMovieByURL",error)
+
                     return {
                         success: false,
                         message: error.toString()
@@ -469,12 +473,12 @@ var Subnhanh = function () {
     {
         key: 'searchMovieByFilter',
         value: function () {
-            async function searchMovieByFilter(query) {
+            async function searchMovieByFilter(key,query) {
                 try {
-                    let urlSearch = `${URL.DOMAIN}${value.substring(1)}`
+                    let urlSearch = `${URL.DOMAIN}${query.substring(1)}`
                     return await parseHtmlSearchPage(this.libs, urlSearch)
                 } catch (error) {
-                    //console.log("Error ",error)
+                    console.log("Error searchMovieByFilter",error)
                     return {
                         success: false,
                         message: error.toString()

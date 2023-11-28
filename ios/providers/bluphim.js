@@ -7,6 +7,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function") } }
 
 var Bluphim = function () {
+    const TAG = "API_Bluphim "
     const URL = {
         DOMAIN = "https://bluphim.com",
         URL_DETAIL = "$DOMAIN/?feed=fsharejson&id=",
@@ -98,6 +99,7 @@ var Bluphim = function () {
                         listCollectionMovie.push(collection)
                     }
 
+                    console.log(`${TAG} listCollectionMovie`,listCollectionMovie);
                     //banner
 
                     let listBanner = allMovies.sort(function () { return 0.5 - Math.random() })
@@ -121,6 +123,7 @@ var Bluphim = function () {
                         }
                     }
                 } catch (error) {
+                    console.error(TAG,error)
                     return {
                         success: false,
                         message: error

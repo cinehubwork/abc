@@ -561,12 +561,12 @@ var Bluphim = function () {
         var urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g
         return message.match(urlRegex)[0].replace("\"", "").replace("\'", "")
     }
-    fixUrl = function (url){
+    function fixUrl(url){
         if(!url) return ''
         if(url.includes("http")){
             return url
         }else {
-            `${URL.DOMAIN}/${url}`
+            return `${URL.DOMAIN}/${url}`
         }
     }
     function getItemMove($, htmlMovie) {

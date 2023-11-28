@@ -375,7 +375,7 @@ var Subnhanh = function () {
                             let linkIframe = $("iframe").attr("src")
                             server.linkIframe = linkIframe //https://streamasia.cloud/public/dist/indexsubnhanh.html?id=c827c9153912746096435039f52ed124
 
-                            var url_parts = url.parse(linkIframe, true)
+                            var url_parts = this.libs.url.parse(linkIframe, true)
                             var id = url_parts.query.id
 
                             if (id) {

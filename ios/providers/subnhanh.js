@@ -144,16 +144,7 @@ var Subnhanh = function () {
     {
         key: 'getDetailMovie',
         value: function () {
-            var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url) {
-                var _libs, httpRequest, cheerio, html, n, reg, result
-                return regeneratorRuntime.wrap(function _callee2$(_context2) {
-                    _libs = this.libs,
-                        httpRequest = _libs.httpRequest,
-                        cheerio = _libs.cheerio
-                    console.log("regeneratorRuntime  ====>")
-                    return "ABC"
-                }, _callee2, this)
-            }))
+            
             /**
              * parse HTML and get infomation detail movie from URL Detail Movie Page
              * @param {*} urlDetail url detail movie page
@@ -163,7 +154,7 @@ var Subnhanh = function () {
                 try {
                     //console.log("getDetailMovie ----->", urlDetail)
                     let response = await this.libs.axios.get(urlDetail)
-                    console.log("getDetailMovie ----->", response.data)
+                    // console.log("getDetailMovie ----->", response.data)
                     const $ = this.libs.cheerio.load(response.data)
                     let realName = $(".header-title").text().split(',')[1].trim()
                     let other = URL.DOMAIN + $(".button_xemphim").attr("href").substring(1)
@@ -172,6 +163,7 @@ var Subnhanh = function () {
                         realName,
                         other
                     }
+                    console.log("movie ======> ", movie);
                     for (let index = 0; index < listDataHtml.length; index++) {
                         const data = $(listDataHtml[index]).text()
                         if (data.includes("Thể loại:")) {
@@ -189,6 +181,8 @@ var Subnhanh = function () {
                             movie.year = data.replace("Năm sản xuất:", "").trim()
                         }
                     }
+                    console.log("movie ======> ", movie);
+
                     let lichChieu = $(listDataHtml.last()).text()
                     movie.rate = "6"
                     movie.description = lichChieu + "<br>" + $("#review .rtb").html()

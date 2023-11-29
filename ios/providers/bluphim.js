@@ -243,9 +243,9 @@ var Bluphim = function () {
 
                     let response = await this.libs.axios.get(urlOther)
                     let $ = this.libs.cheerio.load(response.data)
-                    let html = $.html()
+                  
 
-                    let listEpBluphim = html('.episodes a').map((item)=>{
+                    let listEpBluphim = $('.episodes a').map((item)=>{
                         return {
                             urlEp:  $(item)?.attr("href"),
                             name: $(item).text().trim()

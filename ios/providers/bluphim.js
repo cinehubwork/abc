@@ -243,7 +243,7 @@ var Bluphim = function () {
 
                     let response = await this.libs.axios.get(urlOther)
                     let $ =await this.libs.cheerio.load(response.data)
-                    let listEpHtml = $('.episodes').find(a)
+                    let listEpHtml = $('.episodes').find('a')
                     let listEp = []
                     for (let index = 0; index < listEpHtml.length; index++) {
                         const item = array[index];

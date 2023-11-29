@@ -147,7 +147,7 @@ var Bluphim = function () {
     {
         key: 'getDetailMovie',
         value: function () {
-            
+
             /**
              * parse HTML and get infomation detail movie from URL Detail Movie Page
              * @param {*} urlDetail url detail movie page
@@ -159,45 +159,40 @@ var Bluphim = function () {
                     let response = await this.libs.axios.get(urlDetail)
                     // console.log("getDetailMovie ----->", response.data)
                     const $ = this.libs.cheerio.load(response.data)
-                    let realName = $(".header-title").text().split(',')[1].trim()
-                    let other = URL.DOMAIN + $(".button_xemphim").attr("href").substring(1)
+                    let realName = $(".title").text().trim()
+                    let other = fixUrl($(".buttons .btn-stream-link").first().attr("href"))
                     let listDataHtml = $(".header-short-description > div")
                     let movie = {
                         realName,
                         other
                     }
-                    console.log("movie ======> ", movie);
-                    for (let index = 0; index < listDataHtml.length; index++) {
-                        const data = $(listDataHtml[index]).text()
-                        if (data.includes("Thể loại:")) {
-                            let genre = data.replace("Thể loại:", "").trim()
-                            movie.category = genre
-                        } else if (data.includes("Quốc gia:")) {
-                            movie.country = data.replace("Quốc gia:", "").trim()
-                        } else if (data.includes("Diễn viên:")) {
-                            movie.actors = data.replace("Diễn viên:", "").trim()
-                        } else if (data.includes("Đạo diễn:")) {
-                            movie.director = data.replace("Đạo diễn:", "").trim()
-                        } else if (data.includes("Thời lượng:")) {
-                            movie.duration = data.replace("Thời lượng:", "").trim()
-                        } else if (data.includes("Năm")) {
-                            movie.year = data.replace("Năm sản xuất:", "").trim()
-                        }
-                    }
-                    console.log("movie ======> ", movie);
+                    console.log("movie ======> ", movie)
+                    // for (let index = 0; index < listDataHtml.length; index++) {
+                    //     const data = $(listDataHtml[index]).text()
+                    //     if (data.includes("Thể loại:")) {
+                    //         let genre = data.replace("Thể loại:", "").trim()
+                    //         movie.category = genre
+                    //     } else if (data.includes("Quốc gia:")) {
+                    //         movie.country = data.replace("Quốc gia:", "").trim()
+                    //     } else if (data.includes("Diễn viên:")) {
+                    //         movie.actors = data.replace("Diễn viên:", "").trim()
+                    //     } else if (data.includes("Đạo diễn:")) {
+                    //         movie.director = data.replace("Đạo diễn:", "").trim()
+                    //     } else if (data.includes("Thời lượng:")) {
+                    //         movie.duration = data.replace("Thời lượng:", "").trim()
+                    //     } else if (data.includes("Năm")) {
+                    //         movie.year = data.replace("Năm sản xuất:", "").trim()
+                    //     }
+                    // }
+                    console.log("movie ======> ", movie)
 
-                    let lichChieu = $(listDataHtml.last()).text()
+                    let lichChieu = ''
                     movie.rate = "6"
-                    movie.description = lichChieu + "<br>" + $("#review .rtb").html()
-                    let meta = $(".header-short-description meta")
-                    for (let index = 0; index < meta.length; index++) {
-                        const data = $(meta[index])
-                        if ($(data).attr("itemprop") == 'thumbnailUrl') {
-                            movie.urlBackdrop = URL.DOMAIN + $(data).attr("content").substring(1)
-                        }
-                    }
+                    movie.description = lichChieu + "<br>" + $("#info-film").html()
+                    let meta = $(".poster img")
+                    movie.urlBackdrop = fixUrl($('.poster img').attr("src"))
                     movie.urlReview = urlDetail
-                    let relateMovieHtml = $(".item-list-wrapper .item") //.more .los .box
+                    let relateMovieHtml = $("#film_related .item") //.more .los .box
                     let listRelateMovie = []
                     for (let index = 0; index < relateMovieHtml.length; index++) {
                         let movieInHtml = relateMovieHtml[index]
@@ -205,7 +200,7 @@ var Bluphim = function () {
                         listRelateMovie.push(movieRelate)
                     }
                     movie.listMovieRelate = JSON.stringify(listRelateMovie)
-                    console.log("movie get detail will response ", movie);
+                    console.log("movie get detail will response ", movie)
                     return {
                         success: true,
                         data: movie

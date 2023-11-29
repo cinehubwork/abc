@@ -254,7 +254,12 @@ var Bluphim = function () {
                     let idMovie = "idFilm"
                     let idEpisode = "idEp"
                     let ajaxPlayerUrl = "token"
-                    bongNgoDataEpisode.listGroupEpisode = (listGroup)
+                    bongNgoDataEpisode.listGroupEpisode = [
+                        {
+                            titleGroup: 'BongNgoTV',
+                            episodeList: listEpBluphim
+                        }
+                    ]
                     bongNgoDataEpisode.idEpisode = (idEpisode)
                     bongNgoDataEpisode.idFilm = (idMovie)
                     bongNgoDataEpisode.tokenIndexEpisode = (ajaxPlayerUrl)

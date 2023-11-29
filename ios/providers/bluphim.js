@@ -159,7 +159,7 @@ var Bluphim = function () {
                     let response = await this.libs.axios.get(urlDetail)
                     // console.log("getDetailMovie ----->", response.data)
                     const $ = this.libs.cheerio.load(response.data)
-                    let realName = $(".title").text().trim()
+                    let realName = $(".title").first().text().trim()
                     let other = fixUrl($(".buttons .btn-stream-link").first().attr("href"))
                     let listDataHtml = $(".header-short-description > div")
                     let movie = {

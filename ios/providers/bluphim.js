@@ -242,22 +242,24 @@ var Bluphim = function () {
                     let bongNgoDataEpisode = {}
 
                     let response = await this.libs.axios.get(urlOther)
-                    let $ = this.libs.cheerio.load(response.data)
-                  
-
-                    let listEpBluphim = $('.episodes a').map((item)=>{
-                        return {
-                            urlEp:  $(item)?.attr("href"),
+                    let $ =await this.libs.cheerio.load(response.data)
+                    let listEpHtml = $('.episodes').find(a)
+                    let listEp = []
+                    for (let index = 0; index < listEpHtml.length; index++) {
+                        const item = array[index];
+                        listEp.push({
+                            urlEp:  fixUrl($(item)?.attr("href")),
                             name: $(item).text().trim()
-                        }
-                    })
+                        })
+                    }
+                   
                     let idMovie = "idFilm"
                     let idEpisode = "idEp"
                     let ajaxPlayerUrl = "token"
                     bongNgoDataEpisode.listGroupEpisode = [
                         {
                             titleGroup: 'BongNgoTV',
-                            episodeList: listEpBluphim
+                            episodeList: listEp
                         }
                     ]
                     bongNgoDataEpisode.idEpisode = (idEpisode)

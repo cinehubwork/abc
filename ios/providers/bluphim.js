@@ -258,7 +258,7 @@ var Bluphim = function () {
                     let ajaxPlayerUrl = "token"
                     bongNgoDataEpisode.listGroupEpisode = [
                         {
-                            titleGroup: 'BongNgoTV',
+                            titleGroup: 'FullHD',
                             episodeList: listEp
                         }
                     ]

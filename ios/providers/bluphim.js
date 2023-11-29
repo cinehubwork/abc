@@ -188,7 +188,7 @@ var Bluphim = function () {
 
                     let lichChieu = ''
                     movie.rate = "6"
-                    movie.description = lichChieu + "<br>" + $("#info-film").html()
+                    movie.description = lichChieu + "<br>" + $("#info-film").text().trim()
                     let meta = $(".poster img")
                     movie.urlBackdrop = fixUrl($('.poster img').attr("src"))
                     movie.urlReview = urlDetail
@@ -239,72 +239,33 @@ var Bluphim = function () {
              */
             async function getListServerAndEpisode(urlOther) {
                 try {
+                    let bongNgoDataEpisode = {}
 
                     let response = await this.libs.axios.get(urlOther)
                     let $ = this.libs.cheerio.load(response.data)
                     let html = $.html()
 
-                    let idMovie = getParamFromJS(html, "fcurrentid")
-                    let idEpisode = getParamFromJS(html, "fcurrentEpId")
-                    let ajaxPlayerUrl = getParamFromJS(html, "ajaxPlayerUrl")
-
-
-                    console.log(`DATA = ${ajaxPlayerUrl} , ${idEpisode} , ${idMovie}`)
-                    const form_data = new FormData()
-                    form_data.append('film_id', idMovie)
-                    form_data.append('ep_id', idEpisode)
-                    // const headers = form_data.getHeaders();
-                    // headers['X-Requested-With'] = 'XMLHttpRequest'
-                    let headers = {
-                        Accept: 'application/json',
-                        'Content-Type': 'multipart/form-data',
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                    let resListEp = await this.libs.axios.post(`${URL.DOMAIN}ajax/list-episode`, form_data, { headers })
-                    $ = this.libs.cheerio.load(resListEp.data)
-                    let bongNgoDataEpisode = {}
-
-                    let epg = $('.collection-list-wrapper') // list group ep
-                    let listGroup = []
-                    // parse list group episode
-                    for (let index = 0; index < epg.length; index++) {
-                        const groupEpisodeHtml = epg[index]
-                        let groupEpisode = {}
-                        groupEpisode.titleGroup = $(groupEpisodeHtml).find('h4').text()
-                        let liListEpisodeHtml = $(groupEpisodeHtml).find('.collection-list .collection-item')
-                        let list = []
-                        // parse list episode inside group
-                        for (let indexEpisode = 0; indexEpisode < liListEpisodeHtml.length; indexEpisode++) {
-                            const episodeHtml = liListEpisodeHtml[indexEpisode]
-                            let episode = {}
-
-                            let url = URL.DOMAIN + $(episodeHtml).find("a").attr("href").substring(1)
-                            let name = $(episodeHtml).find("a").text()
-                            // let id = $(episodeHtml).find("a").attr('data-id')
-                            // let fId = $(episodeHtml).find("a").attr('data-fid')
-                            // let dataKey = $(episodeHtml).find("a").attr('data-key')
-
-                            episode.urlEp = url
-                            episode.name = name
-                            // episode.id = id
-                            // episode.fId = fId
-                            // episode.dataKey = dataKey
-
-                            list.push(episode)
+                    let listEpBluphim = html('.episodes a').map((item)=>{
+                        return {
+                            urlEp:  $(item)?.attr("href"),
+                            name: $(item).text().trim()
                         }
-                        groupEpisode.episodeList = (list)
-                        listGroup.push(groupEpisode)
-                    }
-
+                    })
+                    let idMovie = "idFilm"
+                    let idEpisode = "idEp"
+                    let ajaxPlayerUrl = "token"
                     bongNgoDataEpisode.listGroupEpisode = (listGroup)
                     bongNgoDataEpisode.idEpisode = (idEpisode)
                     bongNgoDataEpisode.idFilm = (idMovie)
                     bongNgoDataEpisode.tokenIndexEpisode = (ajaxPlayerUrl)
+
+                  
                     return {
                         success: true,
                         data: bongNgoDataEpisode
                     }
                 } catch (error) {
+                    console.error(error);
                     return {
                         success: false,
                         message: error.toString(),

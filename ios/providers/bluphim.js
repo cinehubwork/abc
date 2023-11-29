@@ -246,7 +246,7 @@ var Bluphim = function () {
                     let listEpHtml = $('.episodes').find('a')
                     let listEp = []
                     for (let index = 0; index < listEpHtml.length; index++) {
-                        const item = array[index];
+                        const item = listEpHtml[index];
                         listEp.push({
                             urlEp:  fixUrl($(item)?.attr("href")),
                             name: $(item).text().trim()

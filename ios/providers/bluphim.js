@@ -714,7 +714,7 @@ var Bluphim = function () {
     }
     function getItemMove($, htmlMovie) {
         let title = $(htmlMovie).find(".name").last().text()
-        //console.log("TITLE ->",title)
+        console.log("TITLE ->",title)
         let status = $(htmlMovie).find(".label").text()
         let urlDetail = fixUrl($(htmlMovie).find("a").attr("href"))
         const urlPhoto = fixUrl($(htmlMovie).find("img").first().attr("src"))

@@ -185,9 +185,13 @@ var Bluphim = function () {
                     //     }
                     // }
                     console.log("movie ======> ", movie)
-
+                    movie.category = $(".theloaidd a").text().join(",").trim()
+                    movie.actors = $(".dienviendd a").text().join(",").trim()
+                    movie.director = $(".daodiendd a").text().join(",").trim()
+                    movie.duration = $(".film-status").first().text().trim()
+                    movie.rate = $(".film-status").last().text().trim()
                     let lichChieu = ''
-                    movie.rate = "6"
+                   // movie.rate = "6"
                     movie.description = lichChieu + "<br>" + $("#info-film").text().trim()
                     let meta = $(".poster img")
                     movie.urlBackdrop = fixUrl($('.poster img').attr("src"))

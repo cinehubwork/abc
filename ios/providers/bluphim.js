@@ -304,7 +304,7 @@ var Bluphim = function () {
             async function getLinkStreamV2(fid, epId, urlAjax, callback) {
                 try {
                     let promiseForAll = []
-                    promiseForAll.push(new Promise(async (resolve, reject) => {
+                    promiseForAll.push(new Promise( (resolve, reject) => {
                         console.log("promise1 was race ======>")
 
                         let res = await this.libs.axios.get(urlAjax)

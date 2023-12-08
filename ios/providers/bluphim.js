@@ -307,8 +307,8 @@ var Bluphim = function () {
                     promiseForAll.push(new Promise( (resolve, reject) => {
                         console.log("promise1 was race ======>")
 
-                        let res = await this.libs.axios.get(urlAjax)
-                        let $ = await this.libs.cheerio.load(res.data)
+                        let res = await this.libs.axios.get(urlAjax);
+                        let $ = await this.libs.cheerio.load(res.data) 
                         let iframeUrl = $("#iframeStream").attr("src")
                         if (!iframeUrl) {
                             console.log("iframeUrl not found ==============>")

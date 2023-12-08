@@ -304,7 +304,7 @@ var Bluphim = function () {
             async function getLinkStreamV2(fid, epId, urlAjax, callback) {
                 try {
                     let promiseForAll = []
-                    promiseForAll.push(new Promise( (resolve, reject) => {
+                  let ps1 =   new Promise( async (resolve, reject) => {
                         console.log("promise1 was race ======>")
 
                         let res = await this.libs.axios.get(urlAjax);
@@ -373,7 +373,8 @@ var Bluphim = function () {
                         } else {
                             reject("Fail bcs idVideo is null")
                         }
-                    }))
+                    })
+                    promiseForAll.push(ps1)
 
                     console.log("Added all promisse to Promise ======>")
                     await Promise.race(promiseForAll).then(callback)

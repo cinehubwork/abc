@@ -169,19 +169,19 @@ var Bluphim = function () {
                     console.log("movie ======> ", movie)
                     // for (let index = 0; index < listDataHtml.length; index++) {
                     //     const data = $(listDataHtml[index]).text()
-                    //     if (data.includes("Thể loại:")) {
-                    //         let genre = data.replace("Thể loại:", "").trim()
+                    //     if (data.includes("Thá»ƒ loáº¡i:")) {
+                    //         let genre = data.replace("Thá»ƒ loáº¡i:", "").trim()
                     //         movie.category = genre
-                    //     } else if (data.includes("Quốc gia:")) {
-                    //         movie.country = data.replace("Quốc gia:", "").trim()
-                    //     } else if (data.includes("Diễn viên:")) {
-                    //         movie.actors = data.replace("Diễn viên:", "").trim()
-                    //     } else if (data.includes("Đạo diễn:")) {
-                    //         movie.director = data.replace("Đạo diễn:", "").trim()
-                    //     } else if (data.includes("Thời lượng:")) {
-                    //         movie.duration = data.replace("Thời lượng:", "").trim()
-                    //     } else if (data.includes("Năm")) {
-                    //         movie.year = data.replace("Năm sản xuất:", "").trim()
+                    //     } else if (data.includes("Quá»‘c gia:")) {
+                    //         movie.country = data.replace("Quá»‘c gia:", "").trim()
+                    //     } else if (data.includes("Diá»…n viÃªn:")) {
+                    //         movie.actors = data.replace("Diá»…n viÃªn:", "").trim()
+                    //     } else if (data.includes("Äáº¡o diá»…n:")) {
+                    //         movie.director = data.replace("Äáº¡o diá»…n:", "").trim()
+                    //     } else if (data.includes("Thá»i lÆ°á»£ng:")) {
+                    //         movie.duration = data.replace("Thá»i lÆ°á»£ng:", "").trim()
+                    //     } else if (data.includes("NÄƒm")) {
+                    //         movie.year = data.replace("NÄƒm sáº£n xuáº¥t:", "").trim()
                     //     }
                     // }
                     console.log("movie ======> ", movie)
@@ -255,7 +255,7 @@ var Bluphim = function () {
                    
                     let idMovie = "idFilm"
                     let idEpisode = "idEp"
-                    let ajaxPlayerUrl = "token"
+                    let ajaxPlayerUrl = urlOther
                     bongNgoDataEpisode.listGroupEpisode = [
                         {
                             titleGroup: 'FullHD',
@@ -304,89 +304,160 @@ var Bluphim = function () {
              */
             async function getLinkStreamFromEpisodeData(fid, epId, urlAjax) {
                 try {
-                    let listServer = []
-                    listServer.push({
-                        typeplay: "iframe",
-                        namesv: "Server HLS",
-                        key: "hls"
-                    })
-                    listServer.push({
-                        typeplay: "iframe",
-                        namesv: "Server VIP2",
-                        key: "vipp"
-                    })
+                    let res = await this.libs.axios.get(urlAjax)
+                    let $ =await this.libs.cheerio.load(res.data)
+                    let iframeUrl = $("#iframeStream").attr("src")
+                    if(!iframeUrl){
+                        console.log("iframeUrl not found ==============>")
+                        return {
+                            success: false,
+                            message: "Iframe is not found",
+                        }
+                    }
+                    console.log("iframeUrl",iframeUrl)
+                    const splitUrl = iframeUrl.split("&")
+                 
+                     const idVideo =splitUrl[0].substring(splitUrl[0].indexOf("=")+1)
+                    const idSub = splitUrl[1].replace("subId=","")
+                    const web = splitUrl[2].replace("web=","")
+                     console.log("BLUE 22222 ===>", `idVideo: ${idVideo} - idSub: ${idSub} - web: ${web}`)
+                   
+                     const form_data = new FormData()
+                     form_data.append('renderer',  "ANGLE (ATI Technologies Inc., AMD Radeon Pro 555 OpenGL Engine, OpenGL 4.1)")
+                    const responseGetToken =await this.libs.axios.post("https://cdn.cdnmoviking.tech/geturl",form_data)
+                    const apiToken = responseGetToken.data
+                    console.log("BLUE resToken ===>", `resToken: ${apiToken} `)
+                    if (!apiToken || apiToken == '') {
+                             console.log("BLUE", "API TOKEN FAIL ===========>")
+                            return {
+                            success: false,
+                            message: "TOKEN is not found",
+                             }
+                    }
+                    const token1 = apiToken.split("&").find((str)=>str.includes("token1"))  //token1=6d24520    using for vid
+                    const token2 = apiToken.split("&").find((str)=>str.includes("token2"))  //token1=6d24520   using for subtitle
+                    const token3 = apiToken.split("&").find((str)=>str.includes("token3"))  //token1=6d24520   using for vid
+                     console.log("BLUE token3 ===>", `token1: ${token1} - token2: ${token2} - token3: ${token3}`)
+                   
+                   if(idVideo){
+                       const urlM3u8 = `${URL.URL_GET_LINK}/segment/${idVideo}/?${token1}&${token3}`
+                        let listServer = []
+                        let listSubtitles = []
+                        let linkIframe = `https://bongngotv.vip/player?urlStream=${encodeURIComponent(urlM3u8)}&urlSub=`
+                        if(idSub){
+                             const urlSubtitle = `${URL.URL_GET_LINK}/subtitle/${idSub}/?${web}&${token2}`
+                             linkIframe+=encodeURIComponent(urlSubtitle)
+                             listSubtitles.push({
+                                 url:urlSubtitle,
+                                 lang:'vi',
+                                 type:'text/vtt',
+                                 language:'Vietnamese'
+                             })
+                        }
+                        
+                        listServer.push({
+                            typeplay: "iframe",
+                            namesv: "Server BongNgoTV",
+                            key: "hls",
+                            urlPlaylistHls:urlM3u8,
+                            sourcePlaylist:[{
+                                urlStream:urlM3u8,
+                                name:'1080P'
+                            }],
+                            subtitles: listSubtitles,
+                            linkIframe: linkIframe
+                        })
+                        console.log("BLUE return ===>", `listServer: ${listServer}`)
+                   
+                         return {
+                            success: true,
+                            data: listServer,
+                        }
+                   }
+                    // let listServer = []
                     // listServer.push({
                     //     typeplay: "iframe",
-                    //     namesv: "Server VIP3",
-                    //     key: "okru_str"
+                    //     namesv: "Server HLS",
+                    //     key: "hls"
                     // })
-                    let listBackupServer = []
-                    for (let index = 0; index < listServer.length; index++) {
-                        const server = listServer[index]
-                        let urlRequest = `${URL.DOMAIN}${urlAjax.substring(1)}` //'https://Bluphim.net/frontend/default/ajax-player'
-                        const form_data = new FormData()
-                        form_data.append('epId', epId)
-                        form_data.append('type', server.key)
-                        // const headers = form_data.getHeaders();
-                        // headers['X-Requested-With'] = 'XMLHttpRequest'
-                        let headers = {
-                            Accept: 'application/json',
-                            'Content-Type': 'multipart/form-data',
-                            'X-Requested-With': 'XMLHttpRequest'
-                        }
-                        try {
-                            let res = await this.libs.axios.post(urlRequest, form_data, { headers })
-                            //console.log('---->', res.data);
-                            const $ = this.libs.cheerio.load(res.data)
-                            let linkIframe = $("iframe").attr("src")
-                            server.linkIframe = linkIframe //https://streamasia.cloud/public/dist/indexBluphim.html?id=c827c9153912746096435039f52ed124
+                    // listServer.push({
+                    //     typeplay: "iframe",
+                    //     namesv: "Server VIP2",
+                    //     key: "vipp"
+                    // })
+                    // // listServer.push({
+                    // //     typeplay: "iframe",
+                    // //     namesv: "Server VIP3",
+                    // //     key: "okru_str"
+                    // // })
+                    // let listBackupServer = []
+                    // for (let index = 0; index < listServer.length; index++) {
+                    //     const server = listServer[index]
+                    //     let urlRequest = `${URL.DOMAIN}${urlAjax.substring(1)}` //'https://Bluphim.net/frontend/default/ajax-player'
+                    //     const form_data = new FormData()
+                    //     form_data.append('epId', epId)
+                    //     form_data.append('type', server.key)
+                    //     // const headers = form_data.getHeaders();
+                    //     // headers['X-Requested-With'] = 'XMLHttpRequest'
+                    //     let headers = {
+                    //         Accept: 'application/json',
+                    //         'Content-Type': 'multipart/form-data',
+                    //         'X-Requested-With': 'XMLHttpRequest'
+                    //     }
+                    //     try {
+                    //         let res = await this.libs.axios.post(urlRequest, form_data, { headers })
+                    //         //console.log('---->', res.data);
+                    //         const $ = this.libs.cheerio.load(res.data)
+                    //         let linkIframe = $("iframe").attr("src")
+                    //         server.linkIframe = linkIframe //https://streamasia.cloud/public/dist/indexBluphim.html?id=c827c9153912746096435039f52ed124
 
-                            var url_parts = this.libs.url.parse(linkIframe, true)
-                            var id = url_parts.query.id
+                    //         var url_parts = this.libs.url.parse(linkIframe, true)
+                    //         var id = url_parts.query.id
 
-                            if (id) {
-                                let hostname = url_parts.hostname
-                                let urlPlaylist = `https://${hostname}/playlist/${id}/${new Date().getTime()}.m3u8`
-                                server.urlPlaylistHls = urlPlaylist
-                                let sourcePlaylist = await getQualityHls(this.libs,urlPlaylist, hostname)
-                                //console.log('sourcePlaylist', sourcePlaylist)
-                                listBackupServer.push({
-                                    typeplay: server.typeplay,
-                                    namesv: server.namesv + "(Dự phòng)",
-                                    linkIframe: server.linkIframe
-                                })
-                                server.sourcePlaylist = sourcePlaylist
-                            } else if (url_parts.query.vid) {
-                                id = url_parts.query.vid
-                                let hostname = url_parts.hostname
-                                let urlPlaylist = `https://${hostname}/hls/v2/${id}/playlist.m3u8`
-                                server.urlPlaylistHls = urlPlaylist
-                                let sourcePlaylist = []
-                                let quality = {}
-                                quality.urlStream = urlPlaylist
-                                quality.name = 'HD'
-                                sourcePlaylist.push(quality)
-                                //console.log('sourcePlaylist', sourcePlaylist)
-                                listBackupServer.push({
-                                    typeplay: server.typeplay,
-                                    namesv: server.namesv + "(Dự phòng)",
-                                    linkIframe: server.linkIframe
-                                })
-                                server.sourcePlaylist = sourcePlaylist
-                            }
-                        } catch (errorApi) {
-                            console.error('ERROR API ===========>',errorApi)
-                        }
+                    //         if (id) {
+                    //             let hostname = url_parts.hostname
+                    //             let urlPlaylist = `https://${hostname}/playlist/${id}/${new Date().getTime()}.m3u8`
+                    //             server.urlPlaylistHls = urlPlaylist
+                    //             let sourcePlaylist = await getQualityHls(this.libs,urlPlaylist, hostname)
+                    //             //console.log('sourcePlaylist', sourcePlaylist)
+                    //             listBackupServer.push({
+                    //                 typeplay: server.typeplay,
+                    //                 namesv: server.namesv + "(Dá»± phÃ²ng)",
+                    //                 linkIframe: server.linkIframe
+                    //             })
+                    //             server.sourcePlaylist = sourcePlaylist
+                    //         } else if (url_parts.query.vid) {
+                    //             id = url_parts.query.vid
+                    //             let hostname = url_parts.hostname
+                    //             let urlPlaylist = `https://${hostname}/hls/v2/${id}/playlist.m3u8`
+                    //             server.urlPlaylistHls = urlPlaylist
+                    //             let sourcePlaylist = []
+                    //             let quality = {}
+                    //             quality.urlStream = urlPlaylist
+                    //             quality.name = 'HD'
+                    //             sourcePlaylist.push(quality)
+                    //             //console.log('sourcePlaylist', sourcePlaylist)
+                    //             listBackupServer.push({
+                    //                 typeplay: server.typeplay,
+                    //                 namesv: server.namesv + "(Dá»± phÃ²ng)",
+                    //                 linkIframe: server.linkIframe
+                    //             })
+                    //             server.sourcePlaylist = sourcePlaylist
+                    //         }
+                    //     } catch (errorApi) {
+                    //         console.error('ERROR API ===========>',errorApi)
+                    //     }
 
-                    }
-                    listServer.push(...listBackupServer)
-                    console.log('RESPONSE API ===========>',listServer)
+                    // }
+                    // listServer.push(...listBackupServer)
+                    // console.log('RESPONSE API ===========>',listServer)
 
                     return {
                         success: true,
-                        data: listServer,
+                        data: [],
                     }
                 } catch (error) {
+                    console.error("ERROR ====>",error)
                     return {
                         success: false,
                         message: error.toString(),

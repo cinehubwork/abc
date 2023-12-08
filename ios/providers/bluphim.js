@@ -283,7 +283,114 @@ var Bluphim = function () {
         }()
     },
 
+    {
+        key: 'getLinkStreamV2',
+        value: function () {
+            var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url) {
+                var _libs, httpRequest, cheerio, html, n, reg, result
+                return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                    _libs = this.libs,
+                        httpRequest = _libs.httpRequest,
+                        cheerio = _libs.cheerio
+                    console.log("regeneratorRuntime  ====>")
+                    return "ABC"
+                }, _callee2, this)
+            }))
+            /**
+             * parse HTML and get infomation detail movie from URL Detail Movie Page
+             * @param {*} urlDetail url detail movie page
+             * @returns json data which has list collection movie or error message
+             */
+            async function getLinkStreamV2(fid, epId, urlAjax, callback) {
+                try {
+                    let promiseForAll = []
+                    promiseForAll.push(new Promise(async (resolve, reject) => {
+                        console.log("promise1 was race ======>")
 
+                        let res = await this.libs.axios.get(urlAjax)
+                        let $ = await this.libs.cheerio.load(res.data)
+                        let iframeUrl = $("#iframeStream").attr("src")
+                        if (!iframeUrl) {
+                            console.log("iframeUrl not found ==============>")
+                            return {
+                                success: false,
+                                message: "Iframe is not found",
+                            }
+                        }
+                        console.log("iframeUrl", iframeUrl)
+                        const splitUrl = iframeUrl.split("&")
+
+                        const idVideo = splitUrl[0].substring(splitUrl[0].indexOf("=") + 1)
+                        const idSub = splitUrl[1].replace("subId=", "")
+                        const web = splitUrl[2].replace("web=", "")
+                        console.log("BLUE 22222 ===>", `idVideo: ${idVideo} - idSub: ${idSub} - web: ${web}`)
+
+                        const form_data = new FormData()
+                        form_data.append('renderer', "ANGLE (ATI Technologies Inc., AMD Radeon Pro 555 OpenGL Engine, OpenGL 4.1)")
+                        const responseGetToken = await this.libs.axios.post("https://cdn.cdnmoviking.tech/geturl", form_data)
+                        const apiToken = responseGetToken.data
+                        console.log("BLUE resToken ===>", `resToken: ${apiToken} `)
+                        if (!apiToken || apiToken == '') {
+                            console.log("BLUE", "API TOKEN FAIL ===========>")
+                            return {
+                                success: false,
+                                message: "TOKEN is not found",
+                            }
+                        }
+                        const token1 = apiToken.split("&").find((str) => str.includes("token1"))  //token1=6d24520    using for vid
+                        const token2 = apiToken.split("&").find((str) => str.includes("token2"))  //token1=6d24520   using for subtitle
+                        const token3 = apiToken.split("&").find((str) => str.includes("token3"))  //token1=6d24520   using for vid
+                        console.log("BLUE token3 ===>", `token1: ${token1} - token2: ${token2} - token3: ${token3}`)
+
+                        if (idVideo) {
+                            const urlM3u8 = `${URL.URL_GET_LINK}/segment/${idVideo}/?${token1}&${token3}`
+                            let listSubtitles = []
+                            let linkIframe = `https://bongngotv.vip/player?urlStream=${encodeURIComponent(urlM3u8)}&urlSub=`
+                            if (idSub) {
+                                const urlSubtitle = `${URL.URL_GET_LINK}/subtitle/${idSub}/?${web}&${token2}`
+                                linkIframe += encodeURIComponent(urlSubtitle)
+                                listSubtitles.push({
+                                    url: urlSubtitle,
+                                    lang: 'vi',
+                                    type: 'text/vtt',
+                                    language: 'Vietnamese'
+                                })
+                            }
+
+                        
+
+                            resolve({
+                                success: true,
+                                data: {
+                                    sourcePlaylist: [{
+                                        urlStream: urlM3u8,
+                                        name: '1080P'
+                                    }],
+                                    subtitles: listSubtitles,
+                                    linkIframe: linkIframe
+                                },
+                            })
+                        } else {
+                            reject("Fail bcs idVideo is null")
+                        }
+                    }))
+
+                    console.log("Added all promisse to Promise ======>")
+                    await Promise.race(promiseForAll).then(callback)
+                    console.log("Promise was race ======>")
+
+                    return true
+                } catch (error) {
+                    console.error("ERROR ====>", error)
+                    return {
+                        success: false,
+                        message: error.toString(),
+                    }
+                }
+            }
+            return getLinkStreamV2
+        }()
+    },
     {
         key: 'getLinkStreamFromEpisodeData',
         value: function () {

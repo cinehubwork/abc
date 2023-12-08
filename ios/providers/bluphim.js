@@ -713,7 +713,7 @@ var Bluphim = function () {
         }
     }
     function getItemMove($, htmlMovie) {
-        let title = $(htmlMovie).find(".name").last().text()
+        let title = $(htmlMovie).find("span").last().text().trim()
         console.log("TITLE ->",title)
         let status = $(htmlMovie).find(".label").text()
         let urlDetail = fixUrl($(htmlMovie).find("a").attr("href"))

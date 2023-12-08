@@ -377,7 +377,7 @@ var Bluphim = function () {
                     promiseForAll.push(ps1)
 
                     console.log("Added all promisse to Promise ======>")
-                    await Promise.race(promiseForAll).then(callback)
+                    await Promise.race(promiseForAll).then(callback).catch((e)=>console.error('HOW',e))
                     console.log("Promise was race ======>")
 
                     return true

@@ -185,9 +185,9 @@ var Bluphim = function () {
                     //     }
                     // }
                     console.log("movie ======> ", movie)
-                    movie.category = $(".theloaidd a").text().join(",").trim()
-                    movie.actors = $(".dienviendd a").text().join(",").trim()
-                    movie.director = $(".daodiendd a").text().join(",").trim()
+                    movie.category = $(".theloaidd a").text().trim()
+                    movie.actors = $(".dienviendd a").text().trim()
+                    movie.director = $(".daodiendd a").text().trim()
                     movie.duration = $(".film-status").first().text().trim()
                     movie.rate = $(".film-status").last().text().trim()
                     let lichChieu = ''

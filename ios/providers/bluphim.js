@@ -11,7 +11,7 @@ var Bluphim = function () {
     const URL = {
         DOMAIN : "https://bluphim.com",
         URL_DETAIL: "$DOMAIN/?feed=fsharejson&id=",
-        URL_GET_LINK :"https://cdn.techtnet.com",
+        URL_GET_LINK :"https://cdn.cdnmoviking.tech",
         HEADERS: {
             'Origin': '',
             'Accept-Language': 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2',
@@ -458,7 +458,7 @@ var Bluphim = function () {
                         let listSubtitles = []
                         let linkIframe = `https://bongngotv.vip/player?urlStream=${encodeURIComponent(urlM3u8)}&urlSub=`
                         if(idSub){
-                             const urlSubtitle = `${URL.URL_GET_LINK}/subtitle/${idSub}/?${web}&${token2}`
+                             const urlSubtitle = `https://cdn.tinnyapi.tech/subtitle/${idSub}/?${web}&${token2}`
                              linkIframe+=encodeURIComponent(urlSubtitle)
                              listSubtitles.push({
                                  url:urlSubtitle,

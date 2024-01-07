@@ -437,6 +437,9 @@ var Bluphim = function () {
                    
                      const form_data = new FormData()
                      form_data.append('renderer',  "ANGLE (ATI Technologies Inc., AMD Radeon Pro 555 OpenGL Engine, OpenGL 4.1)")
+                     form_data.append('id',  "60ff114c79d7fb9bd9e0a01986d1f7da")
+                     form_data.append('videoId', idVideo)
+                     form_data.append('domain', URL.DOMAIN)
                     const responseGetToken =await this.libs.axios.post("https://cdn.cdnmoviking.tech/geturl",form_data)
                     const apiToken = responseGetToken.data
                     console.log("BLUE resToken ===>", `resToken: ${apiToken} `)

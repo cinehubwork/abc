@@ -7,9 +7,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function") } }
 
 var Bluphim = function () {
-    const TAG = "API_Bluphim "
+    const TAG = "API_BongNgoTV "
     const URL = {
-        DOMAIN : "https://bluphim.com",
+        API_KEY:"9d2bff12ed955c7f1f74b83187f188ae",
+        DOMAIN : "https://api.themoviedb.org/3",
         URL_DETAIL: "$DOMAIN/?feed=fsharejson&id=",
         URL_GET_LINK :"https://cdn.cdnmoviking.tech",
         HEADERS: {
@@ -26,8 +27,8 @@ var Bluphim = function () {
         this.libs = props.libs
         this.settings = props.settings
         this.state = {}
-        console.log("Bluphim", this.libs)
-        console.log("Bluphim", this.settings)
+        console.log(TAG, this.libs)
+        console.log(TAG, this.settings)
     }
 
 
@@ -75,60 +76,70 @@ var Bluphim = function () {
 
             async function getHomeMovies() {
                 try {
-                    
+                    let listUrlMainPage = []
+                    listUrlMainPage.push(`${URL.DOMAIN}/trending/all/day?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+                    listUrlMainPage.push(`${URL.DOMAIN}/movie/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+                    listUrlMainPage.push(`${URL.DOMAIN}$tmdbAPI/tv/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+
+                    for (let index = 0; index < listUrlMainPage.length; index++) {
+                        const url = listUrlMainPage[index];
+                        let response = await this.libs.axios.get(url)
+                        console.log(TAG,response.data)
+                    }
+
                     //   axios.get('https://something.com/foo');
-                    let response = await this.libs.axios.get(URL.DOMAIN)
-                    const $ = this.libs.cheerio.load(response.data)
-                    const listCollection = $(".list-films")
-                    let listCollectionMovie = []
-                    let allMovies = []
-                    for (let i = 0; i < listCollection.length; i++) {
-                        let listMovieInCollection = $(listCollection[i]).find(".item")
-                        let collectionName = $(listCollection[i]).find(".title-box").first().text().trim().replace(/\n/g, '').replace(/  /g, '')
-                        let urlSeeMore = ""
+                    // let response = await this.libs.axios.get(URL.DOMAIN)
+                    // const $ = this.libs.cheerio.load(response.data)
+                    // const listCollection = $(".list-films")
+                    // let listCollectionMovie = []
+                    // let allMovies = []
+                    // for (let i = 0; i < listCollection.length; i++) {
+                    //     let listMovieInCollection = $(listCollection[i]).find(".item")
+                    //     let collectionName = $(listCollection[i]).find(".title-box").first().text().trim().replace(/\n/g, '').replace(/  /g, '')
+                    //     let urlSeeMore = ""
 
 
-                        let listMovie = []
-                        for (let index = 0; index < listMovieInCollection.length; index++) {
-                            let movieInHtml = listMovieInCollection[index]
-                            let movieItem = getItemMove($, movieInHtml)
-                            listMovie.push(movieItem)
-                            allMovies.push(movieItem)
-                        }
-                        let collection = {
-                            name: collectionName,
-                            urlDetail: urlSeeMore,
-                            hasSeemore: urlSeeMore != '' ? true : null,
-                            type: 0,
-                            isLocal: false,
-                            isActive: true,
-                            index: 1,
-                            movies: listMovie
-                        }
-                        listCollectionMovie.push(collection)
-                    }
+                    //     let listMovie = []
+                    //     for (let index = 0; index < listMovieInCollection.length; index++) {
+                    //         let movieInHtml = listMovieInCollection[index]
+                    //         let movieItem = getItemMove($, movieInHtml)
+                    //         listMovie.push(movieItem)
+                    //         allMovies.push(movieItem)
+                    //     }
+                    //     let collection = {
+                    //         name: collectionName,
+                    //         urlDetail: urlSeeMore,
+                    //         hasSeemore: urlSeeMore != '' ? true : null,
+                    //         type: 0,
+                    //         isLocal: false,
+                    //         isActive: true,
+                    //         index: 1,
+                    //         movies: listMovie
+                    //     }
+                    //     listCollectionMovie.push(collection)
+                    // }
 
-                    console.log(`${TAG} listCollectionMovie`,listCollectionMovie);
-                    //banner
+                    // console.log(`${TAG} listCollectionMovie`,listCollectionMovie);
+                    // //banner
 
-                    let listBanner = allMovies.sort(function () { return 0.5 - Math.random() })
+                    // let listBanner = allMovies.sort(function () { return 0.5 - Math.random() })
 
-                    let banners = []
-                    for (let index = 0; index < listBanner.length; index++) {
-                        const element = listBanner[index]
-                        let banner = {
-                            urlPhoto: element.urlPhoto,
-                            title: element.title,
-                            urlDetail: element.urlDetail
-                        }
-                        banners.push(banner)
-                    }
+                    // let banners = []
+                    // for (let index = 0; index < listBanner.length; index++) {
+                    //     const element = listBanner[index]
+                    //     let banner = {
+                    //         urlPhoto: element.urlPhoto,
+                    //         title: element.title,
+                    //         urlDetail: element.urlDetail
+                    //     }
+                    //     banners.push(banner)
+                    // }
                     // console.log("ListBanner",banners);
                     return {
                         success: true,
                         data: {
-                            listBanners: banners,
-                            collections: listCollectionMovie
+                            // listBanners: banners,
+                            // collections: listCollectionMovie
                         }
                     }
                 } catch (error) {

@@ -1,6 +1,20 @@
 [
     {
         "_id": "6111efb5c04505ac8cc91071",
+        "url": "https://bongngotv.com/",
+        "urlDefault": "https://bluphim.com/the-loai/phim-moi-1",
+        "urlSearch": "https://bluphim.com/search?k=%s",
+        "name": "Nguồn BongNgoTV",
+        "keyword": "bongngotv",
+        "description": "Cập nhật phim nhanh, tốc độc load phim nhanh.",
+        "isActive": true,
+        "isVip": true,
+        "index": 1,
+        "version":1,
+        "supportIOS": true,
+        "raw": "https://raw.githubusercontent.com/cinehubwork/abc/master/ios/providers/bongngotv.js"
+    },{
+        "_id": "6111efb5c04505ac8cc91071",
         "url": "https://bluphim.com/",
         "urlDefault": "https://bluphim.com/the-loai/phim-moi-1",
         "urlSearch": "https://bluphim.com/search?k=%s",

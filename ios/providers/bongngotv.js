@@ -76,17 +76,30 @@ var Bluphim = function () {
 
             async function getHomeMovies() {
                 try {
-                    let listUrlMainPage = []
-                    listUrlMainPage.push(`${URL.DOMAIN}/trending/all/day?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
-                    listUrlMainPage.push(`${URL.DOMAIN}/movie/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
-                    listUrlMainPage.push(`${URL.DOMAIN}$tmdbAPI/tv/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+                    // let listUrlMainPage = []
+                    // listUrlMainPage.push(`${URL.DOMAIN}/trending/all/day?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+                    // listUrlMainPage.push(`${URL.DOMAIN}/movie/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
+                    // listUrlMainPage.push(`${URL.DOMAIN}$tmdbAPI/tv/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`)
 
-                    for (let index = 0; index < listUrlMainPage.length; index++) {
-                        const url = listUrlMainPage[index];
-                        let response = await this.libs.axios.get(url)
-                        console.log(TAG,response.data)
+                    // for (let index = 0; index < listUrlMainPage.length; index++) {
+                    //     const url = listUrlMainPage[index];
+                    //     let response = await this.libs.axios.get(url)
+                    //     console.log(TAG,response.data)
+                    // }
+
+                    const tags = new Map();
+
+                    // Thêm tag cho các url
+                    tags.set(`${URL.DOMAIN}/trending/all/day?api_key=${URL.API_KEY}&region=VN&language=vi-VN`, "trending-all-day");
+                    tags.set(`${URL.DOMAIN}/movie/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`, "movie-popular");
+                    tags.set(`${URL.DOMAIN}$tmdbAPI/tv/popular?api_key=${URL.API_KEY}&region=VN&language=vi-VN`, "tv-popular");
+
+                    // Lấy tag ứng với mỗi url
+                    for (const [url, tag] of tags) {
+                    // Hiển thị kết quả
+                    let response = await this.libs.axios.get(url)
+                    console.log(`${TAG},${tag},${response.data}`);
                     }
-
                     //   axios.get('https://something.com/foo');
                     // let response = await this.libs.axios.get(URL.DOMAIN)
                     // const $ = this.libs.cheerio.load(response.data)

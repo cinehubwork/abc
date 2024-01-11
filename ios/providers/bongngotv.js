@@ -98,7 +98,7 @@ var Bluphim = function () {
                     for (const [url, tag] of tags) {
                     // Hiển thị kết quả
                     let response = await this.libs.axios.get(url)
-                    console.log(`${TAG},${tag},${response.data}`);
+                    console.log(`${TAG},${tag},${JSON.stringify(response.data)}`);
                     }
                     //   axios.get('https://something.com/foo');
                     // let response = await this.libs.axios.get(URL.DOMAIN)

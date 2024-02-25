@@ -5,8 +5,6 @@
 #EXT-X-PLAYLIST-TYPE:VOD
 #EXTINF:10.427089,
 https://cdn2.xyncdn.tech/s1/segment/b9fa5c308b0649bb9bef735ae9a2657a/v_0.jpg
-#EXTINF:4.754744,
-v_1.jpg?token3=db17de6
 #EXTINF:10.427089,
 https://cdn2.xyncdn.tech/s1/segment/b9fa5c308b0649bb9bef735ae9a2657a/v_2.jpg
 #EXTINF:10.427078,

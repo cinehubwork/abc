@@ -672,7 +672,7 @@ var Bluphim = function () {
 
             let response = await libs.axios.get(url)
             const $ = libs.cheerio.load(response.data)
-            const listCollection = $("#all-items")
+            const listCollection = $(".list-films")
             let listMovieInCollection = $(listCollection).find(".item")
             let listMovie = []
             for (let index = 0; index < listMovieInCollection.length; index++) {
@@ -701,7 +701,7 @@ var Bluphim = function () {
             }
 
         } catch (error) {
-            //console.log("ERROR",error)
+            console.log("ERROR search",error)
             return {
                 success: false,
                 message: error.toString()

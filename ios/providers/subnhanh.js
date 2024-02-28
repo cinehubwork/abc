@@ -8,9 +8,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Subnhanh = function () {
     const URL = {
-        DOMAIN: "https://subnhanh.im/",
+        DOMAIN: "https://subnhanh.moe/",
         URL_GET_LINK_STREAM: "https://api-v3.bongngo.info/ajax/episodes",
-        SEARCH: "https://subnhanh.im/search?query=",
+        SEARCH: "https://subnhanh.moe/search?query=",
         HEADERS: {
             'Origin': '',
             'Accept-Language': 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2',

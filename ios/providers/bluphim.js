@@ -9,7 +9,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Bluphim = function () {
     const TAG = "API_Bluphim "
     const URL = {
-        DOMAIN : "https://bluphim.com",
+        DOMAIN : "https://bluphim.net",
         URL_DETAIL: "$DOMAIN/?feed=fsharejson&id=",
         URL_GET_LINK :"https://cdn.xyncdn.tech",
         HEADERS: {

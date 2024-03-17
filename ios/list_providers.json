@@ -1,9 +1,9 @@
 [
     {
         "_id": "6111efb5c04505ac8cc91071",
-        "url": "https://bluphim.com/",
-        "urlDefault": "https://bluphim.com/the-loai/phim-moi-1",
-        "urlSearch": "https://bluphim.com/search?k=%s",
+        "url": "https://bluphim.net/",
+        "urlDefault": "https://bluphim.net/the-loai/phim-moi-1",
+        "urlSearch": "https://bluphim.net/search?k=%s",
         "name": "Nguồn Bluphim",
         "keyword": "bluphim",
         "description": "Cập nhật phim nhanh, tốc độc load phim nhanh.",

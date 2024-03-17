@@ -19,7 +19,7 @@ var Bluphim = function () {
             'Accept': '*/*',
             'X-Requested-With': 'XMLHttpRequest'
         },
-        SEARCH:"https://bluphim.com/search?k="
+        SEARCH:"https://bluphim.net/search?k="
     }
     function Bluphim(props) {
         _classCallCheck(this, Bluphim)

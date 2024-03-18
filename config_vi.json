@@ -29,14 +29,6 @@
     "__v": 0,
     "listBanners":[
       
-      
-      {
-        "_id": "603a0cc3aeafd82893d77163",
-        "urlDetail": "https://phimapi.com/phim/quy-co-mang-nhen",
-        "urlPhoto": "https://image.tmdb.org/t/p/original/mlWsRy9TwuVK7jAGetbIZ29FpDV.jpg",
-        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
-        "logo": "https://image.tmdb.org/t/p/original/lvwvsMThst70oQPwICXlEb0QfD5.png"
-      },
       {
         "_id": "603a0cc3aeafd82893d77163",
         "urlDetail": "https://phimapi.com/phim/thieu-nu-va-ac-long",
@@ -44,6 +36,14 @@
         "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
         "logo": "https://image.tmdb.org/t/p/original/reAMGW5P64lzxxtMGwM9eh59Or0.png"
       },
+      {
+        "_id": "603a0cc3aeafd82893d77163",
+        "urlDetail": "https://phimapi.com/phim/quy-co-mang-nhen",
+        "urlPhoto": "https://image.tmdb.org/t/p/original/mlWsRy9TwuVK7jAGetbIZ29FpDV.jpg",
+        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
+        "logo": "https://image.tmdb.org/t/p/original/lvwvsMThst70oQPwICXlEb0QfD5.png"
+      },
+     
       {
         "_id": "603a0cc3aeafd82893d77163",
         "urlDetail": "https://phimmoichillo.net/info/nu-hoang-nuoc-mat-pm15695",

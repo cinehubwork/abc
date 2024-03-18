@@ -35,7 +35,22 @@
         "urlPhoto": "https://image.tmdb.org/t/p/original/mlWsRy9TwuVK7jAGetbIZ29FpDV.jpg",
         "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
         "logo": "https://image.tmdb.org/t/p/original/lvwvsMThst70oQPwICXlEb0QfD5.png"
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77163",
+        "urlDetail": "https://phimapi.com/phim/thieu-nu-va-ac-long",
+        "urlPhoto": "https://image.tmdb.org/t/p/original/kXcbpTb9g4UkDYKQnHD4KlMmuUD.jpg",
+        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
+        "logo": "https://image.tmdb.org/t/p/original/reAMGW5P64lzxxtMGwM9eh59Or0.png"
+      },
+      {
+        "_id": "603a0cc3aeafd82893d77163",
+        "urlDetail": "https://phimmoichillo.net/info/nu-hoang-nuoc-mat-pm15695",
+        "urlPhoto": "https://image.tmdb.org/t/p/original/7ZXLZ3KYL3IVvsSHBZaHjcNQzNU.jpg",
+        "title": "Phim Hot  •  Hành Bộ  •  Hàn Quốc  •  Drama",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png"
       }
+      
       
       ],
       "listRenaming":[

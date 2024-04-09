@@ -30,28 +30,11 @@
     "listBanners":[
       {
         "_id": "603a0cc3aeafd82893d77163",
-        "urlDetail": "https://phimapi.com/phim/thieu-nu-va-ac-long",
-        "urlPhoto": "https://image.tmdb.org/t/p/original/kXcbpTb9g4UkDYKQnHD4KlMmuUD.jpg",
-        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
-        "logo": "https://image.tmdb.org/t/p/original/reAMGW5P64lzxxtMGwM9eh59Or0.png"
-      },
-      {
-        "_id": "603a0cc3aeafd82893d77163",
-        "urlDetail": "https://phimapi.com/phim/quy-co-mang-nhen",
-        "urlPhoto": "https://image.tmdb.org/t/p/original/mlWsRy9TwuVK7jAGetbIZ29FpDV.jpg",
-        "title": "Phim Hot  •  Hành động  •  Viễn tưởng  •  Kinh dị",
-        "logo": "https://image.tmdb.org/t/p/original/lvwvsMThst70oQPwICXlEb0QfD5.png"
-      },
-      
-      {
-        "_id": "603a0cc3aeafd82893d77163",
-        "urlDetail": "https://phimmoichillo.net/info/nu-hoang-nuoc-mat-pm15695",
+        "urlDetail": "https://phimmoichillp.net/info/nu-hoang-nuoc-mat-pm15695",
         "urlPhoto": "https://image.tmdb.org/t/p/original/7ZXLZ3KYL3IVvsSHBZaHjcNQzNU.jpg",
         "title": "Phim Hot  •  Hành Bộ  •  Hàn Quốc  •  Drama",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png"
       }
-      
-      
       ],
       "listRenaming":[
         {
@@ -63,5 +46,5 @@
           "newName":"Phim 4K"
         }
       ],
-      "listApiSupportedByPhimHD": ["Animehay","HHPanda","Bluphim","JustChill 4K","BongNgoTV","VIP","SubNhanh","Phimmoi","Tocanime","Fshare","Fshare-test","Phimmoi-test","Ổ Phim","SoraStream","Bóng Đá & Tivi Online","VLXX","JavHD","Sextop1"]
+      "listApiSupportedByPhimHD": ["IPTV Thể Thao","IPTV Thập Cẩm","IPTV Sao kê","IPTV Cà Khịa TV","IPTV 90 Phút","IPTV","Animehay","HHPanda","Bluphim","JustChill 4K","BongNgoTV","VIP","SubNhanh","Phimmoi","Fshare","Fshare-test","Phimmoi-test","Ổ Phim","SoraStream","Bóng Đá & Tivi Online","VLXX","JavHD","Sextop1"]
 }

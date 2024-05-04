@@ -3,7 +3,7 @@
     "value": "phimhd",
     "key": "startApp",
     "token": "eyJfZnJlc2giOmZhbHNlLCJwaG9uZV9udW1iZXIiOiJkdW9uZ252MTk5NiJ9.ZY2PKg.YHGZXZy6-tEuFdI_lrUf2NUujw8",
-    "version": 120,
+    "version": 122,
     "config": "Chúc bạn và gia đình an khang thịnh vượng. Cảm ơn bạn đã luôn đồng hành cùng BongNgoTV!",
     "urlApiGetStream": "",
     "streamByWebEmbed": false,
@@ -47,5 +47,5 @@
           "newName":"Phim 4K"
         }
       ],
-    "listApiSupportedByPhimHD": ["IPTV Thể Thao","IPTV Thập Cẩm","IPTV Sao kê","IPTV Cà Khịa TV","IPTV 90 Phút","IPTV","Animehay","HHPanda","Bluphim","JustChill 4K","BongNgoTV","VIP","SubNhanh","Phimmoi","Fshare","Fshare-test","Phimmoi-test","Ổ Phim","SoraStream","Tivi Online","VLXX","JavHD","Sextop1"]
+    "listApiSupportedByPhimHD": ["Animehay","HHPanda","Bluphim","JustChill 4K","BongNgoTV","VIP","SubNhanh","Phimmoi","Fshare","Fshare-test","Phimmoi-test","Ổ Phim","SoraStream","Tivi Online","VLXX","JavHD","Sextop1"]
 }
